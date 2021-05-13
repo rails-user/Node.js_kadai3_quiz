@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Node.js課題③ クイズアプリ</title>
+    <meta name="description" content="Node.js課題③ クイズアプリ">
+</head>
+<body>
+    <h1>問題<%= quizNumber %></h1>
+    <div><[ジャンル]<%= category %></div>
+    <div><[難易度]<%= difficulty %></div>
+    <hr>
+    <div ><%= question %></div>
+    <hr>
+    <div>
+        <% for (let i in buttonValue) { %>
+            <input type="button" name="buttons" value="<%= buttonValue[i] %>">
+        <% } %>
+    </div>
+</body>
+<script src="js/public.js"></script>
+</html>
