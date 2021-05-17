@@ -1,3 +1,4 @@
+const httpStatus = require("http-status-codes");
 //controllerモジュールをアプリケーションに追加
 const controller = require("../controllers/controller.js");
 //expressモジュールをアプリケーションに追加
@@ -9,9 +10,13 @@ router.get("/", (req, res) => {
     controller.getIndex(req, res);
 })
 
-router.get("/getQuiz", (req, res) => {
-
-    controller.getQuiz(req, res);
+router.get('/getQuiz', (req, res) => {
+        try {
+            const results = controller.getQuiz(req, res);
+            return results;
+        } catch (err) {
+              console.log(err);
+        }      
 })
 
 module.exports = router
