@@ -11,8 +11,6 @@ module.exports = {
       quizAPI.results.forEach(result => {
         if (result.type === 'multiple') {
           answers = [result.correct_answer, ...result.incorrect_answers];
-          //answers = result.incorrect_answers.concat;
-          //answers.push(result.correct_answer);
           answers = arrayShuffle(answers);
         }
         else if (result.type === 'boolean'){

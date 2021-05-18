@@ -191,15 +191,6 @@ createWait = () => {
     btn0.remove();
 }
 
-//配列のランダムソート関数
-const arrayShuffle = ([...array]) => {
-    for (let i = array.length - 1; i >= 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
-
   //Quizクラス
   class Quiz {
     constructor(jsonObj) {
